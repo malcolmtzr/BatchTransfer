@@ -853,7 +853,6 @@ abstract contract Ownable is Context {
 
 // File: @openzeppelin/contracts/utils/cryptography/MerkleProof.sol
 
-
 // OpenZeppelin Contracts (last updated v4.8.0) (utils/cryptography/MerkleProof.sol)
 
 pragma solidity ^0.8.0;

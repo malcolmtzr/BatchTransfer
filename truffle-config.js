@@ -19,8 +19,10 @@
  */
 
 require('dotenv').config();
-const mnemonic = process.env.MNEMONIC;
+const testnetMnemonic = process.env.TESTNETMNEMONIC;
 const snowtracefujiUrl = process.env.SNOWTRACEFUJIINFURAURL;
+const mainnetMnemonic = process.env.MAINNETMNEMONIC;
+const avalancheMainnetUrl = process.env.AVALANCHEMAINNETURL;
 const snowtraceApiKey = process.env.SNOWTRACEAPIKEY;
  
 const HDWalletProvider = require('@truffle/hdwallet-provider');
@@ -59,8 +61,15 @@ module.exports = {
     //   port: 8545,
     //   network_id: "*"
     // },
+    avalanchemainnet: {
+      provider: () => new HDWalletProvider(mainnetMnemonic, avalancheMainnetUrl, 0),
+      network_id: "43114",
+      gas: 5000000,
+      networkCheckTimeout: 1000000,
+      timeoutBlocks: 200,
+    },
     fuji: {
-      provider: () => new HDWalletProvider(mnemonic, snowtracefujiUrl, 1),
+      provider: () => new HDWalletProvider(testnetMnemonic, snowtracefujiUrl, 1),
       network_id: "43113",
       gas: 5000000,
       networkCheckTimeout: 1000000,    

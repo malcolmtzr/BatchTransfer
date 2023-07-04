@@ -6323,7 +6323,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.9",
-  "updatedAt": "2023-06-28T04:38:33.419Z",
+  "updatedAt": "2023-07-03T09:21:56.749Z",
   "devdoc": {
     "details": "These functions deal with verification of Merkle Tree proofs. The tree and the proofs can be generated using our https://github.com/OpenZeppelin/merkle-tree[JavaScript library]. You will find a quickstart guide in the readme. WARNING: You should avoid using leaf values that are 64 bytes long prior to hashing, or use a hash function other than keccak256 for hashing leaves. This is because the concatenation of a sorted pair of internal nodes in the merkle tree could be reinterpreted as a leaf value. OpenZeppelin's JavaScript library generates merkle trees that are safe against this attack out of the box.",
     "kind": "dev",
